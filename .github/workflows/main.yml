@@ -29,5 +29,6 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ secrets.USER }}/clockbox:v1.0.0
-            ${{ secrets.USER }}/clockbox:latest
+            refs/tags/${{ secrets.USER }}/clockbox:v1.0.0
+            refs/tags/${{ secrets.USER }}/clockbox:latest
+
