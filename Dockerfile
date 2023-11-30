@@ -1,6 +1,6 @@
-FROM balenalib/aarch64-alpine:3.14
-RUN apk --no-cache add nginx
+FROM arm64/nginx:alpine
 WORKDIR /app
-COPY . .
+COPY . /app
 EXPOSE 80
+ENV NAME World
 CMD ["nginx", "-g", "daemon off;"]
