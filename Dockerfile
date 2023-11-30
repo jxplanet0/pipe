@@ -1,4 +1,4 @@
-FROM arm64/nginx:alpine
+FROM arm64:nginx
 WORKDIR /app
 COPY . /app
 EXPOSE 80
