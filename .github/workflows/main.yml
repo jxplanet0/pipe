@@ -1,0 +1,27 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: jxplanet
+          password: dckr_pat_kW41YaunfZn1Ho8xMyg_0qD8H7M
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./pomodoro-timer/Dockerfile
+          push: true
+          tags: jxplanet/clockbox:v1.0.0
