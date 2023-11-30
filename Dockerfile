@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM arm54/nginx:alpine
 WORKDIR /app
 COPY ./pomodoro-timer /app
 EXPOSE 80
