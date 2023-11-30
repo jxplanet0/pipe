@@ -1,6 +1,7 @@
 FROM arm64v8/nginx:alpine 
-WORKDIR /app
-COPY ./pomodoro-timer /app
+WORKDIR /usr/share/nginx/html
+COPY . .
 EXPOSE 80
+COPY custom.conf /etc/nginx/conf.d/default.conf
 ENV NAME World
 CMD ["nginx", "-g", "daemon off;"]
