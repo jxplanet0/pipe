@@ -24,4 +24,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: jxplanet/clockbox:v1.0.0
+          tags: jxplanet/clockbox:v1.0.2
