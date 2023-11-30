@@ -1,7 +1,7 @@
-FROM arm64v8/nginx:alpine
+FROM node:14
 WORKDIR /app
-COPY . /app
-EXPOSE 80
-ENV NAME World
-CMD ["nginx", "-g", "daemon off;"]
-
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 8080
+CMD ["npm", "start"]
