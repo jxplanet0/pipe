@@ -1,5 +1,4 @@
 const start = document.getElementById('start');
-const stop = document.getElementById('stop');
 const reset = document.getElementById('reset');
 const timer = document.getElementById('timer');
 
@@ -23,11 +22,6 @@ function startTimer() {
             timeLeft = 1500;
         }
     }, 1000);
-}
-
-function stopTimer() {
-    clearInterval(interval);
-    interval = undefined; 
 }
 
 function resetTimer() {
