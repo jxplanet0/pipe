@@ -22,6 +22,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./pomodoro-timer/Dockerfile
+          file: ./Dockerfile
           push: true
           tags: jxplanet/clockbox:v1.0.0
