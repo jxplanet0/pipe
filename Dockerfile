@@ -1,7 +1,6 @@
-FROM node:14
+FROM balenalib/aarch64-alpine:3.14
 WORKDIR /app
-COPY package*.json ./
-RUN npm install
 COPY . .
-EXPOSE 8080
-CMD ["npm", "start"]
+EXPOSE 80
+ENV NAME World
+CMD ["nginx", "-g", "daemon off;"]
